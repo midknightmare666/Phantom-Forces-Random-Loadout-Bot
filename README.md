@@ -21,11 +21,11 @@ read here: [Creating a discord bot & getting a token
 # Setup:
 1. Paste your token in the `botconfig.json` file where it says "discord_bot_token_here".
 2. Run `npm install` from terminal/console to install packages from `package.json`
-4. Start the bot by running `node bot`.
+4. Start the bot by running `node bot`
 5. That's It!
 
 # Creating/Updating Weapons:
-- Each PF weapon is under `/weapons/primary` in it's own file with the file name corresponding to the weeapon name (this makes it easier to scroll thru and find weapons for updating).
+- Each PF weapon is under `/weapons/primary` in it's own file with the file name corresponding to the weapon name (this makes it easier to scroll thru and find weapons for updating).
 - Each weapon file exports an object (follow the template below to create/update new weapons):
 - *leave array empty if there are no unique attachmensts for this weapon*
 ```js
@@ -49,14 +49,15 @@ module.exports = {
 - Ideally you'd want to have the weapons saved in a database and just pull their properties from there. However PF / Stylis Studios doesn't provide any API to get weapon information.
 - The next best thing to lookup the weapons from the PF Wiki as well as looking in the actual game
 - PF Wiki: [Phantom Forces Wiki](https://roblox-phantom-forces.fandom.com/wiki/Phantom_Forces_Wiki)
-- If you want to host the bot it's recommended you use a vps (Digital Ocean or AWS).
-*hint: you can use the GITHUB STUDENT PACK to receive Digital Ocean credits for hosting*
-**DO NOT USE GLITCH/HEROKU OR ANY OTHER "FREE" HOSTING SERVICE, THESE TEND TO BE UNRELIABLE (Discord has blacklisted these sites in the past)**
+- If you want to host the bot it's recommended you use a vps (Digital Ocean or AWS)
+- *hint: you can use the GITHUB STUDENT PACK to receive Digital Ocean credits for hosting*
+- **DO NOT USE GLITCH/HEROKU OR ANY OTHER "FREE" HOSTING SERVICE**
+*THESE TEND TO BE UNRELIABLE (Discord has blacklisted these sites in the past)*
 
 # OTHER:
-Q: What about secondary weapons?
-A: You'd have to do that yourself, It's recommended you follow the same structure as primary weapons (secondary folder with secondary weapon files & secondary attachments that are shared across all secondary weapons)
+- Q: What about secondary weapons?
+-  A: You'd have to do that yourself, It's recommended you follow the same structure as primary weapons (secondary folder with secondary weapon files & secondary attachments that are shared across all secondary weapons)
 
-Q: The bot isn't working!
-A: You can contact me on Discord `midknightmare#6666` or Twitter `@midknightmare` for some help but I won't hold your hand either.
+- Q: The bot isn't working!
+- A: You can contact me on Discord `midknightmare#6666` or Twitter `@midknightmare` for some help but I won't hold your hand either.
 
