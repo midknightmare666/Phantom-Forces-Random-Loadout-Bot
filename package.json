@@ -1,0 +1,14 @@
+{
+  "name": "pfbot",
+  "version": "1.0.0",
+  "description": "Random PF Loadout Generator ",
+  "main": "bot.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Dicord: midknightmare#6666, Twitter: @midknightmare",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^11.5.1"
+  }
+}
