@@ -50,24 +50,18 @@ module.exports = {
 
 		const randomPrimaryOther = primaryOther[Math.floor(Math.random() * primaryOther.length)].toUpperCase();
 
+		const randomPrimartBarrel =  primaryBarrel.includes('none') ? 'none' : primaryBarrel[Math.floor(Math.random() * primaryBarrel.length)].toUpperCase();
+
 		const weaponEmbed = new RichEmbed()
 			.setColor('#3F8DCB')
 			.setDescription(`*Redo the command if you don't have a certain attachment*`)
 			.setAuthor('Random Loadout', `${message.author.displayAvatarURL}`)
 			.addField('Primary:', `\`${randomPrimary.toUpperCase()}\``, true)
+			.addField('Optic:', `\`${randomPrimaryOptic}\``)
+			.addField('Barrel:', `\`${randomPrimartBarrel}\``)
+			.addField('Underbarrel:', `\`${randomPrimaryUnderbarrel}\``)
+			.addField('Other:', `\`${randomPrimaryOther}\``)
 
-		if (primaryBarrel.includes('none')) {
-			weaponEmbed.addField('Optic:', `\`${randomPrimaryOptic}\``)
-			weaponEmbed.addField('Barrel:', '\`none\`')
-			weaponEmbed.addField('Underbarrel:', `\`${randomPrimaryUnderbarrel}\``)
-			weaponEmbed.addField('Other:', `\`${randomPrimaryOther}\``)
-		} else {
-			const randomPrimaryBarrel = primaryBarrel[Math.floor(Math.random() * primaryBarrel.length)].toUpperCase();
-			weaponEmbed.addField('Optic:', `\`${randomPrimaryOptic}\``)
-			weaponEmbed.addField('Barrel:', `\`${randomPrimaryBarrel}\``)
-			weaponEmbed.addField('Underbarrel:', `\`${randomPrimaryUnderbarrel}\``)
-			weaponEmbed.addField('Other:', `\`${randomPrimaryOther}\``)
-		}
 		return message.channel.send(weaponEmbed).catch(er => console.error(er));
 	}
 }
